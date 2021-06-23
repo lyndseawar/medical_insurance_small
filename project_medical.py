@@ -68,3 +68,43 @@ def estimate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
 keanu_insurance_cost = estimate_insurance_cost(name = 'Keanu', age = 29, sex = 1, bmi = 26.2, num_of_children = 3, smoker = 1)
 
 estimate_insurance_cost(name = 'John', age = 30, sex = 1, bmi = 20.2, num_of_children = 3, smoker = 0)
+
+names = ["Mohamed", "Sara", "Xia", "Paul", "Valentina", "Jide", "Aaron", "Emily", "Nikita", "Paul"]
+insurance_costs = [13262.0, 4816.0, 6839.0, 5054.0, 14724.0, 5360.0, 7640.0, 6072.0, 2750.0, 12064.0]
+
+# Add your code here
+names.append("Priscilla")
+print(str(names) + '\n')
+insurance_costs.append(8320.0)
+print(str(insurance_costs) + '\n')
+
+medical_records = list(zip(insurance_costs, names))
+print(str(medical_records) + "\n")
+
+num_medical_records = len(medical_records)
+print(str(num_medical_records) + '\n')
+
+print("There are " + str(num_medical_records) + " medical records.\n")
+
+first_medical_records = medical_records[0]
+print(str(first_medical_records) + '\n')
+
+print("Here is the first medical record: " + str(first_medical_records) + '\n')
+
+medical_records.sort()
+print(str(medical_records) + '\n')
+
+print("Here are the medical records sorted by insurance cost: " + str(medical_records) + "\n")
+
+cheapest_three = medical_records[:3]
+print(str(cheapest_three) + '\n')
+
+print("Here are the three cheapest insurance costs in our medical records: " + str(cheapest_three) + '\n')
+
+priciest_three = medical_records[-3:]
+print(str(priciest_three) + "\n")
+
+print("Here are the three most expensive insurance costs in our medical records: " + str(priciest_three) + "\n")
+
+occurrences_paul = names.count("Paul")
+print("There are " + str(occurrences_paul) + " individuals with the name Paul in our medical records." + '\n')
