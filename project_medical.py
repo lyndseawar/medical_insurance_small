@@ -108,3 +108,13 @@ print("Here are the three most expensive insurance costs in our medical records:
 
 occurrences_paul = names.count("Paul")
 print("There are " + str(occurrences_paul) + " individuals with the name Paul in our medical records." + '\n')
+
+#select the medical records starting at index 3 and ending at index 7 and save it in a variable called middle_five_records
+middle_five_records = medical_records[3:8]
+print("These are the middle five medical records: " + str(middle_five_records) + '\n')
+
+
+#sort the medical records alphabetically by name
+by_name_medical_records = list(zip(names, insurance_costs))
+by_name_medical_records.sort()
+print(str(by_name_medical_records) + '\n')
